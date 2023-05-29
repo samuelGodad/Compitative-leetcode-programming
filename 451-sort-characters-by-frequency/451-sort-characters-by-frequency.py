@@ -7,8 +7,7 @@ class Solution:
             else:
                 no_char[char] = 1
         sorted_chars = sorted(no_char.keys(), key=no_char.get, reverse=True)
-        print(no_char.keys())
-    
+   
         sorted_str = ""
         for char in sorted_chars:
             sorted_str += char *no_char[char]
