@@ -5,10 +5,18 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        n= len(nums)
-        for i in range(n):
-            for j in range(i+1,n):
-                if target==nums[i]+nums[j]:
-                    return [i,j]
+        complement_map = {}
+        for i, num in enumerate(nums):
+            complement = target - num
+            if complement in complement_map:
+                return [complement_map[complement], i]
+            complement_map[num] = i
+                
+            
+#         n= len(nums)
+#         for i in range(n):
+#             for j in range(i+1,n):
+#                 if target==nums[i]+nums[j]:
+#                     return [i,j]
             
         
