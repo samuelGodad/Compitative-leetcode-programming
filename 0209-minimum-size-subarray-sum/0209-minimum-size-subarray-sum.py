@@ -7,13 +7,13 @@ class Solution(object):
         """
         left=0
         min_len=float('inf')
-        curr_sum=0
+        win_sum=0
         n=len(nums)
         for right in range(n):
-            curr_sum +=nums[right]
-            while curr_sum>=target:
+            win_sum +=nums[right]
+            while win_sum>=target:
                 min_len=min(min_len,right-left+1)
-                curr_sum-=nums[left]
+                win_sum-=nums[left]
                 left+=1
         if min_len !=float('inf'):
             return min_len
