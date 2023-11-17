@@ -5,7 +5,7 @@ class Solution(object):
         :rtype: List[int]
         """
         a=[]
-        marker=len(nums)+1
+    
         for num in nums:
             index=abs(num)-1
             if nums[index]>0:
