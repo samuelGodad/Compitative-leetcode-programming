@@ -14,3 +14,5 @@ class Solution(object):
                 dictionary[summ]=1
 
         return counter
+
+          
