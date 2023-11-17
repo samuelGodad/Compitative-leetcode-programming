@@ -5,12 +5,14 @@ class Solution(object):
         :rtype: List[int]
         """
         a=[]
+        marker=len(nums)+1
         for num in nums:
             index=abs(num)-1
-           
-            if nums[index]<0:
-                a.append(abs(num))
-            else:
+            if nums[index]>0:
                 nums[index]=-nums[index]
+                
+            else:
+                a.append(abs(num))
+               
         return a
             
