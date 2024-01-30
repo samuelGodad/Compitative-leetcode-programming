@@ -27,9 +27,6 @@ class MyQueue:
             return self.stack_two[-1]
         else:
             return None
-        
-        
-        
 
     def empty(self) -> bool:
         return not self.stack_two and not self.stack_one
